@@ -1,0 +1,19 @@
+{
+  "name": "arduino-projects-portfolio",
+  "version": "1.0.0",
+  "description": "A static portfolio website showcasing student Arduino projects.",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y browser-sync start --server --files \"index.html, css/style.css, js/script.js\""
+  },
+  "keywords": [
+    "arduino",
+    "portfolio",
+    "static",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Nisha",
+  "license": "ISC"
+}

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nisha - Art &amp; Arduino Projects Portfolio</title>
+  <meta name="description" content="A premium single-page portfolio website showcasing Nisha's creative art and Arduino projects.">
+  
+  <!-- Modern Typography (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Prism.js Syntax Highlighting CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <header class="header-nav" id="header-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" id="logo-nav">
+        <i class="fa-solid fa-microchip"></i>
+        <span>NISHA</span>
+      </a>
+      <nav class="nav-links" id="nav-menu">
+        <a href="#about" class="active">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#art">Art</a>
+        <a href="https://github.com/nishaa07" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+      </nav>
+      <div class="menu-toggle" id="menu-mobile-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero" id="hero">
+    <div class="hero-circuit-bg"></div>
+    <div class="hero-glow-sphere"></div>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="hero-student-name">Nisha</span>
+        <h1>Art &amp; Arduino Projects Portfolio</h1>
+        <p>A showcase of creative art and interactive Arduino projects.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-angles-down"></i> Explore Projects</a>
+          <a href="#art" class="btn btn-outline"><i class="fa-solid fa-palette"></i> View Art Gallery</a>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <div class="circuit-canvas-container">
+          <svg class="hero-creative-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <!-- Gradients for Art blobs -->
+              <linearGradient id="artGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff007f" stop-opacity="0.8" />
+                <stop offset="100%" stop-color="#7f00ff" stop-opacity="0.2" />
+              </linearGradient>
+              <linearGradient id="artGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.7" />
+                <stop offset="100%" stop-color="#4facfe" stop-opacity="0.1" />
+              </linearGradient>
+              <linearGradient id="artGrad3" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#f9d423" stop-opacity="0.6" />
+                <stop offset="100%" stop-color="#ff4e50" stop-opacity="0.1" />
+              </linearGradient>
+              <!-- Circuit Glow Filter -->
+              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Background Decorative Grid -->
+            <g stroke="rgba(56, 189, 248, 0.08)" stroke-width="1">
+              <path d="M 0,50 L 400,50 M 0,100 L 400,100 M 0,150 L 400,150 M 0,200 L 400,200 M 0,250 L 400,250 M 0,300 L 400,300 M 0,350 L 400,350" />
+              <path d="M 50,0 L 50,400 M 100,0 L 100,400 M 150,0 L 150,400 M 200,0 L 200,400 M 250,0 L 250,400 M 300,0 L 300,400 M 350,0 L 350,400" />
+            </g>
+
+            <!-- Creative Art Elements: Fluid, colorful organic blobs -->
+            <path d="M80,130 C120,70 200,90 240,140 C280,190 260,260 210,290 C160,320 90,300 70,240 C50,180 40,190 80,130 Z" fill="url(#artGrad1)" />
+            <path d="M220,180 C270,120 330,150 340,210 C350,270 300,320 250,300 C200,280 180,240 220,180 Z" fill="url(#artGrad2)" />
+            <path d="M120,220 C140,170 200,160 220,210 C240,260 190,310 160,300 C130,290 100,270 120,220 Z" fill="url(#artGrad3)" />
+
+            <!-- Circuit Traces linking Art and Tech -->
+            <g fill="none" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5">
+              <path d="M 50,200 L 150,200 L 170,180" />
+              <path d="M 350,200 L 250,200 L 230,220" />
+              <path d="M 200,50 L 200,120 L 180,140" />
+              <path d="M 200,350 L 200,280 L 220,260" />
+            </g>
+
+            <!-- Glowing Nodes / Connection Points -->
+            <circle cx="50" cy="200" r="4" fill="#38bdf8" filter="url(#glow)" />
+            <circle cx="350" cy="200" r="4" fill="#38bdf8" filter="url(#glow)" />
+            <circle cx="200" cy="50" r="4" fill="#ff007f" filter="url(#glow)" />
+            <circle cx="200" cy="350" r="4" fill="#00f2fe" filter="url(#glow)" />
+
+            <!-- The Arduino Microcontroller (Tech Element) -->
+            <!-- Main board container (rotated slightly for dynamics) -->
+            <g transform="translate(200,200) rotate(-15) translate(-100,-80)">
+              <!-- Board Base -->
+              <rect x="0" y="0" width="200" height="160" rx="12" fill="#0b1e36" stroke="#1d4ed8" stroke-width="3" filter="url(#glow)" />
+              <rect x="5" y="5" width="190" height="150" rx="8" fill="#0d284a" />
+              
+              <!-- Microcontroller Chip (ATmega328) -->
+              <rect x="40" y="60" width="120" height="36" rx="4" fill="#1e293b" stroke="#475569" stroke-width="1.5" />
+              <text x="100" y="82" fill="#94a3b8" font-family="monospace" font-size="9" text-anchor="middle" letter-spacing="2">ATMEGA328P</text>
+              <!-- Chip Pins -->
+              <g fill="#94a3b8">
+                <!-- Top pins -->
+                <rect x="48" y="54" width="4" height="6" />
+                <rect x="58" y="54" width="4" height="6" />
+                <rect x="68" y="54" width="4" height="6" />
+                <rect x="78" y="54" width="4" height="6" />
+                <rect x="88" y="54" width="4" height="6" />
+                <rect x="98" y="54" width="4" height="6" />
+                <rect x="108" y="54" width="4" height="6" />
+                <rect x="118" y="54" width="4" height="6" />
+                <rect x="128" y="54" width="4" height="6" />
+                <rect x="138" y="54" width="4" height="6" />
+                <rect x="148" y="54" width="4" height="6" />
+                <!-- Bottom pins -->
+                <rect x="48" y="96" width="4" height="6" />
+                <rect x="58" y="96" width="4" height="6" />
+                <rect x="68" y="96" width="4" height="6" />
+                <rect x="78" y="96" width="4" height="6" />
+                <rect x="88" y="96" width="4" height="6" />
+                <rect x="98" y="96" width="4" height="6" />
+                <rect x="108" y="96" width="4" height="6" />
+                <rect x="118" y="96" width="4" height="6" />
+                <rect x="128" y="96" width="4" height="6" />
+                <rect x="138" y="96" width="4" height="6" />
+                <rect x="148" y="96" width="4" height="6" />
+              </g>
+
+              <!-- USB Port -->
+              <rect x="-10" y="20" width="35" height="30" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1" />
+              <!-- Power Jack -->
+              <rect x="-5" y="105" width="40" height="35" rx="3" fill="#1e293b" />
+
+              <!-- Pin Headers (Female) -->
+              <!-- Top header (Digital) -->
+              <rect x="35" y="10" width="145" height="10" fill="#0f172a" />
+              <g fill="#475569">
+                <circle cx="42" cy="15" r="2.5" />
+                <circle cx="54" cy="15" r="2.5" />
+                <circle cx="66" cy="15" r="2.5" />
+                <circle cx="78" cy="15" r="2.5" />
+                <circle cx="90" cy="15" r="2.5" />
+                <circle cx="102" cy="15" r="2.5" />
+                <circle cx="114" cy="15" r="2.5" />
+                <circle cx="126" cy="15" r="2.5" />
+                <circle cx="138" cy="15" r="2.5" />
+                <circle cx="150" cy="15" r="2.5" />
+                <circle cx="162" cy="15" r="2.5" />
+                <circle cx="174" cy="15" r="2.5" />
+              </g>
+
+              <!-- Bottom header (Power / Analog) -->
+              <rect x="50" y="140" width="110" height="10" fill="#0f172a" />
+              <g fill="#475569">
+                <circle cx="57" cy="145" r="2.5" />
+                <circle cx="69" cy="145" r="2.5" />
+                <circle cx="81" cy="145" r="2.5" />
+                <circle cx="93" cy="145" r="2.5" />
+                <circle cx="105" cy="145" r="2.5" />
+                <circle cx="117" cy="145" r="2.5" />
+                <circle cx="129" cy="145" r="2.5" />
+                <circle cx="141" cy="145" r="2.5" />
+                <circle cx="153" cy="145" r="2.5" />
+              </g>
+
+              <!-- Blinking LEDs & Label -->
+              <circle cx="180" cy="40" r="4" fill="#22c55e" class="svg-blink-led" filter="url(#glow)" />
+              <text x="180" y="52" fill="#22c55e" font-family="sans-serif" font-size="7" text-anchor="middle">ON</text>
+
+              <circle cx="180" cy="110" r="4" fill="#38bdf8" class="svg-blink-led-rx" filter="url(#glow)" />
+              <text x="180" y="122" fill="#38bdf8" font-family="sans-serif" font-size="7" text-anchor="middle">TX/RX</text>
+
+              <!-- Golden capacitor mockups -->
+              <circle cx="160" cy="120" r="8" fill="#eab308" />
+              <circle cx="160" cy="120" r="6" fill="#ca8a04" />
+              <circle cx="140" cy="120" r="8" fill="#eab308" />
+              <circle cx="140" cy="120" r="6" fill="#ca8a04" />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       About Section
+       ========================================================================== -->
+  <section class="about section-bg" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Me</h2>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I love programming, creative art, and building physical computing projects. I love doing new stuff. Prototyping allows me to express my creativity through both painting and functional electronics, bridging the gap between software and the physical world.</p>
+          <p>On this website, I am showcasing my collection of creative art and Arduino projects. I enjoy exploring new ways to combine aesthetic design with hardware, creating interactive systems that are both visually engaging and practically useful.</p>
+          <div style="margin-top: 20px;">
+            <a href="https://github.com/nishaa07" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.95rem; padding: 10px 20px; display: inline-flex; align-items: center; gap: 8px;"><i class="fa-brands fa-github"></i> Visit My GitHub</a>
+          </div>
+        </div>
+        
+        <!-- Profile Image Card -->
+        <div class="about-image-card">
+          <img src="Nisha Photograph.png" alt="Nisha" class="about-profile-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Projects Section
+       ========================================================================== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Projects Showcase</h2>
+        <p>Explore project videos and dynamic simulations built with Arduino.</p>
+      </div>
+
+      <div class="projects-grid">
+        
+
+
+        <!-- Project 1: Smart Blind Stick -->
+        <div class="project-card" id="project-card-1">
+          <div class="project-header-block">
+            <h3>Smart Blind Stick</h3>
+          </div>
+          <!-- Embedded YouTube Video Container -->
+          <div class="video-container" data-video-url="https://www.youtube.com/watch?v=qIkAwUeIe2o" data-project-id="blind-stick">
+            <div class="video-thumbnail-wrapper">
+              <img src="images/blind-stick.png" alt="Smart Blind Stick" class="project-video-thumbnail">
+              <div class="play-btn-overlay">
+                <i class="fa-solid fa-circle-play"></i>
+                <span>Watch Video</span>
+              </div>
+            </div>
+            <div class="video-iframe-wrapper" style="display: none;"></div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">The Smart Blind Stick is an assistive device designed to help visually impaired individuals navigate safely. An ultrasonic sensor continuously measures the distance to obstacles ahead. When an obstacle is detected within a predefined range, the system alerts the user using a buzzer and LED indicator. The project demonstrates the practical application of sensors and microcontrollers to improve accessibility and personal safety.</p>
+            
+            <div>
+              <span class="equipment-list-title">Equipment Used</span>
+              <div class="equipment-tags">
+                <span class="equipment-tag"><i class="fa-solid fa-microchip"></i> Arduino</span>
+                <span class="equipment-tag"><i class="fa-solid fa-table-cells"></i> Breadboard</span>
+                <span class="equipment-tag"><i class="fa-solid fa-bezier-curve"></i> Jumper Wires</span>
+                <span class="equipment-tag"><i class="fa-solid fa-battery-three-quarters"></i> 9V Battery</span>
+                <span class="equipment-tag"><i class="fa-solid fa-circle-nodes"></i> Ultrasonic Sensor</span>
+                <span class="equipment-tag"><i class="fa-solid fa-lightbulb"></i> LED</span>
+                <span class="equipment-tag"><i class="fa-solid fa-lines-leaning"></i> Resistor</span>
+                <span class="equipment-tag"><i class="fa-solid fa-volume-high"></i> Buzzer</span>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-outline btn-toggle-code" id="btn-code-1"><i class="fa-solid fa-code"></i> View Code</button>
+              <button class="btn btn-outline btn-toggle-sim" id="btn-sim-1"><i class="fa-solid fa-play"></i> Start Simulator</button>
+            </div>
+          </div>
+          <!-- Arduino IDE Replica Code Viewer -->
+          <div class="code-viewer-wrapper" id="code-viewer-1">
+            <div class="arduino-ide">
+              <div class="arduino-header">
+                <div class="arduino-actions-group">
+                  <button class="arduino-btn arduino-btn-primary" title="Verify (Compile)"><i class="fa-solid fa-check"></i></button>
+                  <button class="arduino-btn" title="Upload"><i class="fa-solid fa-arrow-right"></i></button>
+                  <button class="arduino-btn" title="New Tab"><i class="fa-solid fa-file-code"></i></button>
+                </div>
+                <div class="arduino-tabs">
+                  <div class="arduino-tab">
+                    <i class="fa-solid fa-code"></i> smart_blind_stick.ino
+                  </div>
+                </div>
+                <div class="arduino-info">
+                  <span>Arduino Uno on COM3</span>
+                </div>
+              </div>
+              <div class="arduino-editor-area">
+                <pre class="line-numbers"><code class="language-cpp">int trigPin = 6;
+int echoPin = 7;
+int led = 4;
+int buzzer = 5;
+long duration;
+int distanceCm;
+
+void setup()
+{ 
+  Serial.begin(9600); 
+
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+
+  pinMode(led, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  duration = pulseIn(echoPin, HIGH);
+  distanceCm = duration * 0.034 / 2;
+
+  Serial.println("Distance: ");
+  Serial.println(distanceCm);
+  delay (100);
+
+  if(distanceCm &lt; 40)
+  {
+    digitalWrite(buzzer, HIGH);
+    digitalWrite(led, HIGH);
+  }
+  else
+  {
+      digitalWrite(buzzer, LOW);
+      digitalWrite(led, LOW);
+  }
+}</code></pre>
+              </div>
+              <div class="arduino-console">
+                <div class="arduino-console-status">
+                  <span class="dot"></span>
+                  <span>Done compiling.</span>
+                </div>
+                <span>9,240 bytes (28% capacity)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Collapsible Simulator Drawer -->
+          <div class="simulator-viewer-wrapper" id="sim-viewer-1">
+            <div class="simulator-wrapper"></div>
+          </div>
+        </div>
+
+        <!-- Project 2: Smart Car Parking System -->
+        <div class="project-card" id="project-card-2">
+          <div class="project-header-block">
+            <h3>Smart Car Parking System</h3>
+          </div>
+          <!-- Embedded YouTube Video Container -->
+          <div class="video-container" data-video-url="https://www.youtube.com/watch?v=kGFWeeBZ9Wg" data-project-id="parking-system">
+            <div class="video-thumbnail-wrapper">
+              <img src="images/parking-system.png" alt="Smart Car Parking System" class="project-video-thumbnail">
+              <div class="play-btn-overlay">
+                <i class="fa-solid fa-circle-play"></i>
+                <span>Watch Video</span>
+              </div>
+            </div>
+            <div class="video-iframe-wrapper" style="display: none;"></div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">The Smart Car Parking System automates vehicle entry and parking slot monitoring. IR sensors detect incoming vehicles and available parking spaces. A servo motor controls the parking gate, while a 16×2 LCD displays parking availability information. The project demonstrates automation, sensing, and real-time information display in smart parking applications.</p>
+            
+            <div>
+              <span class="equipment-list-title">Equipment Used</span>
+              <div class="equipment-tags">
+                <span class="equipment-tag"><i class="fa-solid fa-microchip"></i> Arduino</span>
+                <span class="equipment-tag"><i class="fa-solid fa-table-cells"></i> Breadboard</span>
+                <span class="equipment-tag"><i class="fa-solid fa-bezier-curve"></i> Jumper Wires</span>
+                <span class="equipment-tag"><i class="fa-solid fa-desktop"></i> 16×2 LCD Screen</span>
+                <span class="equipment-tag"><i class="fa-solid fa-network-wired"></i> I2C Module</span>
+                <span class="equipment-tag"><i class="fa-solid fa-eye"></i> IR Sensors</span>
+                <span class="equipment-tag"><i class="fa-solid fa-gears"></i> Servo Motor</span>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-outline btn-toggle-code" id="btn-code-2"><i class="fa-solid fa-code"></i> View Code</button>
+              <button class="btn btn-outline btn-toggle-sim" id="btn-sim-2"><i class="fa-solid fa-play"></i> Start Simulator</button>
+            </div>
+          </div>
+          <!-- Arduino IDE Replica Code Viewer -->
+          <div class="code-viewer-wrapper" id="code-viewer-2">
+            <div class="arduino-ide">
+              <div class="arduino-header">
+                <div class="arduino-actions-group">
+                  <button class="arduino-btn arduino-btn-primary" title="Verify (Compile)"><i class="fa-solid fa-check"></i></button>
+                  <button class="arduino-btn" title="Upload"><i class="fa-solid fa-arrow-right"></i></button>
+                  <button class="arduino-btn" title="New Tab"><i class="fa-solid fa-file-code"></i></button>
+                </div>
+                <div class="arduino-tabs">
+                  <div class="arduino-tab">
+                    <i class="fa-solid fa-code"></i> smart_parking_system.ino
+                  </div>
+                </div>
+                <div class="arduino-info">
+                  <span>Arduino Uno on COM3</span>
+                </div>
+              </div>
+              <div class="arduino-editor-area">
+                <pre class="line-numbers"><code class="language-cpp">#include &lt;Wire.h&gt; 
+#include &lt;LiquidCrystal_I2C.h&gt;
+
+LiquidCrystal_I2C lcd(0x27,16,2);   
+
+#include &lt;Servo.h&gt; 
+
+Servo myservo;
+
+int IR1 = 2;
+int IR2 = 3;
+
+int Slot = 4;
+
+int flag1 = 0;
+int flag2 = 0;
+
+void setup() 
+{
+  Serial.begin(9600); 
+
+  lcd.init();
+  lcd.backlight();
+
+  pinMode(IR1, INPUT);
+  pinMode(IR2, INPUT);
+
+  myservo.attach(4);
+  myservo.write(100);
+
+  lcd.setCursor (0,0);
+  lcd.print("     ARDUINO    ");
+
+  lcd.setCursor (0,1);
+  lcd.print(" PARKING SYSTEM ");
+
+  delay(2000);
+  lcd.clear();  
+}
+
+void loop()
+{ 
+
+  if(digitalRead(IR1) == LOW &amp;&amp; flag1 == 0)
+  {
+    if(Slot &gt; 0)
+    {
+      flag1 = 1;
+      
+      if(flag2 == 0)
+      {
+        myservo.write(0);
+        Slot = Slot - 1;
+      }
+    }
+    else
+    {
+      lcd.setCursor (0,0);
+      lcd.print("    SORRY :(    ");  
+
+      lcd.setCursor (0,1);
+      lcd.print("  Parking Full  "); 
+
+      delay (3000);
+      lcd.clear(); 
+    }
+  }
+
+  if(digitalRead(IR2) == LOW &amp;&amp; flag2 == 0)
+  {
+    flag2 = 1;
+
+    if(flag1 == 0)
+    {
+      myservo.write(0); 
+      Slot = Slot + 1;
+    }
+  }
+
+  if(flag1 == 1 &amp;&amp; flag2 == 1)
+  {
+    delay(1000);
+    myservo.write(100);
+    flag1 = 0;
+    flag2 = 0;
+  }
+
+  lcd.setCursor (0,0);
+  lcd.print("    WELCOME!    ");
+
+  lcd.setCursor (0,1);
+  lcd.print("Slot Left: ");
+  lcd.print(Slot);
+}</code></pre>
+              </div>
+              <div class="arduino-console">
+                <div class="arduino-console-status">
+                  <span class="dot"></span>
+                  <span>Done compiling.</span>
+                </div>
+                <span>12,482 bytes (38% capacity)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Collapsible Simulator Drawer -->
+          <div class="simulator-viewer-wrapper" id="sim-viewer-2">
+            <div class="simulator-wrapper"></div>
+          </div>
+        </div>
+
+        <!-- Project 3: Smart Home Automation -->
+        <div class="project-card" id="project-card-3">
+          <div class="project-header-block">
+            <h3>Smart Home Automation</h3>
+          </div>
+          <!-- Embedded YouTube Video Container -->
+          <div class="video-container" data-video-url="https://www.youtube.com/watch?v=OFBqqGXPVaY" data-project-id="home-automation">
+            <div class="video-thumbnail-wrapper">
+              <img src="images/home-automation.png" alt="Smart Home Automation" class="project-video-thumbnail">
+              <div class="play-btn-overlay">
+                <i class="fa-solid fa-circle-play"></i>
+                <span>Watch Video</span>
+              </div>
+            </div>
+            <div class="video-iframe-wrapper" style="display: none;"></div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">The Smart Home Automation system enables wireless control of household appliances using Bluetooth communication. Commands sent from a smartphone are received through the HC-05 Bluetooth module and processed by the Arduino. A relay module switches electrical loads such as bulbs on and off, demonstrating the basics of IoT-inspired home automation systems.</p>
+            
+            <div>
+              <span class="equipment-list-title">Equipment Used</span>
+              <div class="equipment-tags">
+                <span class="equipment-tag"><i class="fa-solid fa-microchip"></i> Arduino</span>
+                <span class="equipment-tag"><i class="fa-solid fa-table-cells"></i> Breadboard</span>
+                <span class="equipment-tag"><i class="fa-solid fa-bezier-curve"></i> Jumper Wires</span>
+                <span class="equipment-tag"><i class="fa-solid fa-battery-three-quarters"></i> 9V Battery</span>
+                <span class="equipment-tag"><i class="fa-solid fa-wifi"></i> HC-05 Bluetooth Module</span>
+                <span class="equipment-tag"><i class="fa-solid fa-toggle-on"></i> 1 Channel 5V Relay</span>
+                <span class="equipment-tag"><i class="fa-solid fa-circle-dot"></i> Bulb Holder</span>
+                <span class="equipment-tag"><i class="fa-solid fa-lightbulb"></i> Bulb</span>
+                <span class="equipment-tag"><i class="fa-solid fa-plug"></i> Plug</span>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-outline btn-toggle-code" id="btn-code-3"><i class="fa-solid fa-code"></i> View Code</button>
+              <button class="btn btn-outline btn-toggle-sim" id="btn-sim-3"><i class="fa-solid fa-play"></i> Start Simulator</button>
+            </div>
+          </div>
+          <!-- Arduino IDE Replica Code Viewer -->
+          <div class="code-viewer-wrapper" id="code-viewer-3">
+            <div class="arduino-ide">
+              <div class="arduino-header">
+                <div class="arduino-actions-group">
+                  <button class="arduino-btn arduino-btn-primary" title="Verify (Compile)"><i class="fa-solid fa-check"></i></button>
+                  <button class="arduino-btn" title="Upload"><i class="fa-solid fa-arrow-right"></i></button>
+                  <button class="arduino-btn" title="New Tab"><i class="fa-solid fa-file-code"></i></button>
+                </div>
+                <div class="arduino-tabs">
+                  <div class="arduino-tab">
+                    <i class="fa-solid fa-code"></i> smart_home_automation.ino
+                  </div>
+                </div>
+                <div class="arduino-info">
+                  <span>Arduino Uno on COM3</span>
+                </div>
+              </div>
+              <div class="arduino-editor-area">
+                <pre class="line-numbers"><code class="language-cpp">#include &lt;SoftwareSerial.h&gt;
+
+SoftwareSerial BT(10, 11);
+
+int relay = 8;
+
+void setup()
+{
+  pinMode(relay, OUTPUT);
+
+  digitalWrite(relay, HIGH);
+
+  Serial.begin(9600);
+  BT.begin(9600);
+
+  Serial.println("System Ready");
+}
+
+void loop()
+{
+  if(BT.available())
+  {
+    char ch = BT.read();
+
+    Serial.print("Received: ");
+    Serial.println(ch);
+
+    if(ch == '1')
+    {
+      digitalWrite(relay, LOW);
+      Serial.println("Relay ON");
+    }
+
+    if(ch == '0')
+    {
+      digitalWrite(relay, HIGH);
+      Serial.println("Relay OFF");
+    }
+  }
+}</code></pre>
+              </div>
+              <div class="arduino-console">
+                <div class="arduino-console-status">
+                  <span class="dot"></span>
+                  <span>Done compiling.</span>
+                </div>
+                <span>10,854 bytes (33% capacity)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Collapsible Simulator Drawer -->
+          <div class="simulator-viewer-wrapper" id="sim-viewer-3">
+            <div class="simulator-wrapper"></div>
+          </div>
+        </div>
+
+        <!-- Project 4: Smart Air Monitoring System -->
+        <div class="project-card" id="project-card-4">
+          <div class="project-header-block">
+            <h3>Smart Air Monitoring System</h3>
+          </div>
+          <!-- Embedded YouTube Video Container -->
+          <div class="video-container" data-video-url="https://www.youtube.com/watch?v=DMZRxEnchlA" data-project-id="air-monitoring">
+            <div class="video-thumbnail-wrapper">
+              <img src="images/air-monitoring.png" alt="Smart Air Monitoring System" class="project-video-thumbnail">
+              <div class="play-btn-overlay">
+                <i class="fa-solid fa-circle-play"></i>
+                <span>Watch Video</span>
+              </div>
+            </div>
+            <div class="video-iframe-wrapper" style="display: none;"></div>
+          </div>
+          <div class="project-body">
+            <p class="project-description">The Smart Air Monitoring System continuously monitors air quality using an MQ135 gas sensor. Air quality data is displayed on a 16×2 LCD screen. When poor air quality is detected, visual and audio alerts are generated using LEDs and a buzzer. This project demonstrates environmental monitoring and real-time sensor-based alert systems.</p>
+            
+            <div>
+              <span class="equipment-list-title">Equipment Used</span>
+              <div class="equipment-tags">
+                <span class="equipment-tag"><i class="fa-solid fa-microchip"></i> Arduino</span>
+                <span class="equipment-tag"><i class="fa-solid fa-table-cells"></i> Breadboard</span>
+                <span class="equipment-tag"><i class="fa-solid fa-bezier-curve"></i> Jumper Wires</span>
+                <span class="equipment-tag"><i class="fa-solid fa-gauge"></i> MQ135 Module</span>
+                <span class="equipment-tag"><i class="fa-solid fa-desktop"></i> 16×2 LCD Screen</span>
+                <span class="equipment-tag"><i class="fa-solid fa-network-wired"></i> I2C Module</span>
+                <span class="equipment-tag"><i class="fa-solid fa-lightbulb"></i> LED</span>
+                <span class="equipment-tag"><i class="fa-solid fa-lines-leaning"></i> Resistor</span>
+                <span class="equipment-tag"><i class="fa-solid fa-volume-high"></i> Buzzer</span>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <button class="btn btn-outline btn-toggle-code" id="btn-code-4"><i class="fa-solid fa-code"></i> View Code</button>
+              <button class="btn btn-outline btn-toggle-sim" id="btn-sim-4"><i class="fa-solid fa-play"></i> Start Simulator</button>
+            </div>
+          </div>
+          <!-- Arduino IDE Replica Code Viewer -->
+          <div class="code-viewer-wrapper" id="code-viewer-4">
+            <div class="arduino-ide">
+              <div class="arduino-header">
+                <div class="arduino-actions-group">
+                  <button class="arduino-btn arduino-btn-primary" title="Verify (Compile)"><i class="fa-solid fa-check"></i></button>
+                  <button class="arduino-btn" title="Upload"><i class="fa-solid fa-arrow-right"></i></button>
+                  <button class="arduino-btn" title="New Tab"><i class="fa-solid fa-file-code"></i></button>
+                </div>
+                <div class="arduino-tabs">
+                  <div class="arduino-tab">
+                    <i class="fa-solid fa-code"></i> smart_air_monitoring.ino
+                  </div>
+                </div>
+                <div class="arduino-info">
+                  <span>Arduino Uno on COM3</span>
+                </div>
+              </div>
+              <div class="arduino-editor-area">
+                <pre class="line-numbers"><code class="language-cpp">#include &lt;Wire.h&gt;
+#include &lt;LiquidCrystal_I2C.h&gt;
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+int mq135 = A0;
+int led = 7;
+int buzzer = 8;
+
+int threshold = 500;
+
+void setup()
+{
+    pinMode(led, OUTPUT);
+    pinMode(buzzer, OUTPUT);
+
+    Serial.begin(9600);
+
+    lcd.init();
+    lcd.backlight();
+
+    lcd.setCursor(0,0);
+    lcd.print("Air Quality");
+    delay(2000);
+    lcd.clear();
+}
+
+void loop()
+{
+    int airValue = analogRead(mq135);
+
+    Serial.print("Air Value: ");
+    Serial.println(airValue);
+
+    lcd.setCursor(0,0);
+    lcd.print("Air:");
+    lcd.print(airValue);
+
+    if(airValue &gt; threshold)
+    {
+        digitalWrite(led, HIGH);
+        digitalWrite(buzzer, HIGH);
+
+        lcd.setCursor(0,1);
+        lcd.print("AIR BAD!");
+    }
+    else
+    {
+        digitalWrite(led, LOW);
+        digitalWrite(buzzer, LOW);
+
+        lcd.setCursor(0, 1);
+        lcd.print("AIR GOOD");
+    }
+
+    delay(500);
+}</code></pre>
+              </div>
+              <div class="arduino-console">
+                <div class="arduino-console-status">
+                  <span class="dot"></span>
+                  <span>Done compiling.</span>
+                </div>
+                <span>13,104 bytes (40% capacity)</span>
+              </div>
+            </div>
+          </div>
+          <!-- Collapsible Simulator Drawer -->
+          <div class="simulator-viewer-wrapper" id="sim-viewer-4">
+            <div class="simulator-wrapper"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Art Gallery Section
+       ========================================================================== -->
+  <section class="art-gallery" id="art">
+    <div class="container">
+      <div class="section-header">
+        <h2>Art Showcase</h2>
+        <p>A curated gallery of my acrylics painting, mandala art, glass painting, and lippan art.</p>
+      </div>
+
+      <div class="art-grid">
+        <!-- Art Piece 1 -->
+        <div class="art-card" data-src="Art/1.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/1.jpg" alt="Artwork 1" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 1</div>
+        </div>
+
+        <!-- Art Piece 2 -->
+        <div class="art-card" data-src="Art/2.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/2.jpg" alt="Artwork 2" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 2</div>
+        </div>
+
+        <!-- Art Piece 3 -->
+        <div class="art-card" data-src="Art/3.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/3.jpg" alt="Artwork 3" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 3</div>
+        </div>
+
+        <!-- Art Piece 4 -->
+        <div class="art-card" data-src="Art/4.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/4.jpg" alt="Artwork 4" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 4</div>
+        </div>
+
+        <!-- Art Piece 5 -->
+        <div class="art-card" data-src="Art/5.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/5.jpg" alt="Artwork 5" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 5</div>
+        </div>
+
+        <!-- Art Piece 6 -->
+        <div class="art-card" data-src="Art/6.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/6.jpg" alt="Artwork 6" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 6</div>
+        </div>
+
+        <!-- Art Piece 7 -->
+        <div class="art-card" data-src="Art/7.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/7.jpg" alt="Artwork 7" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 7</div>
+        </div>
+
+        <!-- Art Piece 8 -->
+        <div class="art-card" data-src="Art/8.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/8.jpg" alt="Artwork 8" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 8</div>
+        </div>
+
+        <!-- Art Piece 9 -->
+        <div class="art-card" data-src="Art/9.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/9.jpg" alt="Artwork 9" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 9</div>
+        </div>
+
+        <!-- Art Piece 10 -->
+        <div class="art-card" data-src="Art/10.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/10.jpg" alt="Artwork 10" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 10</div>
+        </div>
+
+        <!-- Art Piece 11 -->
+        <div class="art-card" data-src="Art/11.jpg">
+          <div class="art-img-wrapper">
+            <img src="Art/11.jpg" alt="Artwork 11" loading="lazy">
+            <div class="art-hover-overlay">
+              <i class="fa-solid fa-magnifying-glass-plus"></i>
+              <span>View Fullscreen</span>
+            </div>
+          </div>
+          <div class="art-title">Artwork 11</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <i class="fa-solid fa-microchip"></i>
+        <span>NISHA</span>
+      </div>
+      <div class="footer-contact-info">
+        <a href="mailto:heyitsmenishaa@gmail.com" class="footer-contact-item"><i class="fa-solid fa-envelope"></i> heyitsmenishaa@gmail.com</a>
+        <a href="tel:+919670031999" class="footer-contact-item"><i class="fa-solid fa-phone"></i> +91 96700 31999</a>
+      </div>
+      <p style="margin-top: 20px;">&copy; 2026 Nisha. All rights reserved. Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Prism.js Syntax Highlighting Scripts
+       ========================================================================== */ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+  <!-- Lightbox Modal for Art Gallery -->
+  <div class="lightbox" id="art-lightbox">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <div class="lightbox-img-container">
+      <img class="lightbox-content" id="lightbox-img" src="" alt="Lightbox Art">
+    </div>
+    <div class="lightbox-caption" id="lightbox-caption">Artwork</div>
+  </div>
+
+  <!-- Core Page Script Logic -->
+  <script src="js/script.js"></script>
+</body>
+</html>
